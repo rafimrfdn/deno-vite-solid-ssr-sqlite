@@ -4,14 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node myserver",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "preview": "cross-env NODE_ENV=production node myserver"
+    "dev": "deno run -A myserver.js",
+    "build": "deno run build:client && deno run build:server",
+    "build:client": "deno run -A npm:vite build --outDir dist/client",
+    "build:server": "deno run -A npm:vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "preview": "deno run -A npm:cross-env NODE_ENV=production && deno run -A myserver.js"
   },
   "dependencies": {
-    "better-sqlite3": "^11.8.1",
     "compression": "^1.7.5",
     "express": "^5.0.1",
     "sirv": "^3.0.0",

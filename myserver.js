@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import express from 'express'
-import Database from 'better-sqlite3'
+import { Database } from "jsr:@db/sqlite";
 import { generateHydrationScript } from 'solid-js/web'
 
 // Constants
