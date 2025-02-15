@@ -8,3 +8,5 @@ $ deno task dev
 $ deno task build
 $ deno task preview
 ```
+
+![deno vite solid ssr crud](./deno-vite-solid-ssr-crud.png)
